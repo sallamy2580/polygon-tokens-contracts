@@ -7,10 +7,10 @@ const {
   LOCAL_TEST_MNEMONIC,
   RINKEBY_PRIVATE_KEYS,
   ROPSTEN_PRIVATE_KEYS,
-  BSC_MAINNET_PRIVATE_KEY,
-  BSC_TESTNET_PRIVATE_KEY,
-  BSCSCAN_MAINNET_API_KEY,
-  BSCSCAN_TESTNET_API_KEY } = require('./.secrets.json');
+  POLYGON_MAINNET_PRIVATE_KEY,
+  POLYGON_TESTNET_PRIVATE_KEY,
+  POLYGONSCAN_MAINNET_API_KEY,
+  POLYGONSCAN_TESTNET_API_KEY } = require('./.secrets.json');
 /**
  * Use this file to configure your truffle project. It's seeded with some
  * common settings for different networks and features like migrations,
@@ -136,6 +136,6 @@ module.exports = {
     'truffle-plugin-verify'
   ],
   api_keys: {
-    bscscan: BSCSCAN_MAINNET_API_KEY
+    polygonscan: POLYGONSCAN_MAINNET_API_KEY
   }
 };

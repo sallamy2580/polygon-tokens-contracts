@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "ghostmarket NFT contract",
   "main": "index.js",
-  "repository": "https://github.com/ghost-devs/GhostMarketContractBSC",
+  "repository": "https://github.com/ghost-devs/GhostMarketContractPolygon",
   "author": "selimerunkut",
   "license": "MIT",
   "dependencies": {
