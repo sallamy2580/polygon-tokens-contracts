@@ -87,29 +87,25 @@ module.exports = {
       networkCheckTimeout: 10000,
       skipDryRun: false
     },
-    bsctestnet: {
+    polygontestnet: {
       provider: function () {
         return new HDWalletProvider(
-          BSC_TESTNET_PRIVATE_KEY,
-          "https://data-seed-prebsc-2-s1.binance.org:8545/"
-          // alternative RPC
-          //"https://data-seed-prebsc-1-s3.binance.org:8545"
+          POLYGON_TESTNET_PRIVATE_KEY,
+          "https://rpc-mumbai.maticvigil.com/"
         );
       },
-      network_id: "97",
+      network_id: "80001",
       gas: 10000000,
       gasPrice: 10000000000,
     },
-    bscmainnet: {
+    polygonmainnet: {
       provider: function () {
         return new HDWalletProvider(
-          BSC_MAINNET_PRIVATE_KEY,
-          "https://bsc-dataseed.binance.org/"
-          // alternative RPC
-          //"https://bsc-dataseed1.defibit.io/"
+          POLYGON_MAINNET_PRIVATE_KEY,
+          "https://rpc-mainnet.matic.network"
         );
       },
-      network_id: "56",
+      network_id: "137",
       gas: 10000000,
       gasPrice: 10000000000,
     },

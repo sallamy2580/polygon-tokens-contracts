@@ -53,7 +53,7 @@ tests can be run with:
 default network is `test` or a network parameter can be added
 
 ```
-./runGhostMarketERC721_tests.sh bsctestnet
+./runGhostMarketERC721_tests.sh polygontestnet
 ```
 
 
