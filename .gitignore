@@ -6,3 +6,8 @@
 .openzeppelin/.session
 node_modules
 build/source
+cache/
+solidity-files-cache.json
+#*_flat.sol
+.openzeppelin
+artifacts/
