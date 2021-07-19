@@ -15,7 +15,7 @@ async function main() {
     { deployer, initializer: "initialize", unsafeAllowCustomTypes: true });
   //unsafeAllowCustomTypes Ignores struct mapping in AccessControl, which is fine because it's used in a mapping
   //See: https://solidity.readthedocs.io/en/v0.8.3/
-  console.log("deployed to:", GhostMarketERC721Proxy.address);
+  console.log("proxy deployed to:", GhostMarketERC721Proxy.address);
 }
 
 main()
