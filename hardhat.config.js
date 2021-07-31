@@ -8,16 +8,8 @@ require("@nomiclabs/hardhat-etherscan");
 const {
   ALCHEMY_PROJECT_ID,
   INFURA_PROJECT_ID_CYX,
-  INFURA_PROJECT_ID,
-  LOCAL_TEST_MNEMONIC,
-  RINKEBY_PRIVATE_KEYS,
-  ROPSTEN_PRIVATE_KEYS,
-  BSC_MAINNET_PRIVATE_KEY,
-  BSC_TESTNET_PRIVATE_KEY,
-  BSCSCAN_MAINNET_API_KEY,
-  BSCSCAN_TESTNET_API_KEY,
   POLYGON_TESTNET_PRIVATE_KEY,
-  BSCSCAN_API_KEY,
+  POLYGON_MAINNET_PRIVATE_KEY,
   POLYGONSCAN_API_KEY
 } = require('./.secrets.json');
 
@@ -50,25 +42,20 @@ module.exports = {
   networks: {
     hardhat: {
     },
-    mainnet: {
-      url: 'https://bsc-dataseed1.binance.org:443',
-      accounts: BSC_TESTNET_PRIVATE_KEY
-    },
-    bsctestnet: {
-      url: 'https://data-seed-prebsc-1-s1.binance.org:8545',
-      accounts: BSC_TESTNET_PRIVATE_KEY
-    },
     rinkeby: {
       url: 'https://eth-rinkeby.alchemyapi.io/v2/' + ALCHEMY_PROJECT_ID,
-      //url: "https://rinkeby.infura.io/v3/" + INFURA_PROJECT_ID,
+      //url: "https://rinkeby.infura.io/v3/" + INFURA_PROJECT_ID_CYX,
       accounts: BSC_TESTNET_PRIVATE_KEY
-      
     },
     polygontestnet: {
-      url:"https://rpc-mumbai.maticvigil.com/",
+      url: "https://rpc-mumbai.maticvigil.com/",
+      accounts: POLYGON_TESTNET_PRIVATE_KEY
+    },
+    mainnet: {
+      url: "https://rpc-mainnet.matic.network",
       //url: "https://polygon-mumbai.infura.io/v3/" + INFURA_PROJECT_ID,
       // url: " https://polygon-mumbai.g.alchemy.com/v2/" + ALCHEMY_PROJECT_ID,
-      accounts: POLYGON_TESTNET_PRIVATE_KEY
+      accounts: POLYGON_MAINNET_PRIVATE_KEY
     },
   },
   etherscan: {
