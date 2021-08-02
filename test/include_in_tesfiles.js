@@ -2,8 +2,8 @@ const {
   BN,           // Big Number support
 } = require('@openzeppelin/test-helpers');
 
-const GHOSTMARKET_ERC721_ARTIFACT = artifacts.require("GhostMarketERC721");
-const GHOSTMARKET_ERC1155 = artifacts.require("GhostMarketERC1155");
+//const GHOSTMARKET_ERC721_ARTIFACT = artifacts.require("GhostMarketERC721");
+//const GHOSTMARKET_ERC1155 = artifacts.require("GhostMarketERC1155");
 const TOKEN_NAME = "GhostMarket"
 const TOKEN_SYMBOL = "GHOST"
 const BASE_URI = "https://ghostmarket.io/"
@@ -26,13 +26,58 @@ async function getLastTokenID(token) {
   } else return new BN(parseInt(counter - 1));
 }
 
+const toTxHash = (value) => {
+  if (typeof value === "string") {
+    // this is probably a tx hash already
+    return value;
+  } else if (typeof value.receipt === "object") {
+    // this is probably a tx object
+    return value.receipt.transactionHash;
+  } else {
+    throw "Unsupported tx type: " + value;
+  }
+}
+
+const mineTx = (promiseOrTx, interval) => {
+  return Promise.resolve(promiseOrTx)
+    .then(tx => {
+      const txHash = toTxHash(tx);
+
+      return new Promise((resolve, reject) => {
+        const getReceipt = () => {
+          web3.eth.getTransactionReceipt(txHash, (error, receipt) => {
+            if (error) {
+              reject(error);
+            } else if (receipt) {
+              resolve(receipt);
+            } else {
+              setTimeout(getReceipt, interval || 500);
+            }
+          })
+        }
+
+        getReceipt();
+      })
+    });
+}
+
+async function getCurrentBlockTime() {
+  blockNum = await web3.eth.getBlockNumber()
+  block = await web3.eth.getBlock(blockNum)
+  const date = new Date(block['timestamp'] * 1000);
+  //console.log("currentBlockTime: ", date.toLocaleString());
+  return date
+}
+
 module.exports = {
-  GHOSTMARKET_ERC721_ARTIFACT,
-  GHOSTMARKET_ERC1155,
+  //GHOSTMARKET_ERC721_ARTIFACT,
+  //GHOSTMARKET_ERC1155,
   TOKEN_NAME,
   TOKEN_SYMBOL,
   BASE_URI,
   METADATA_JSON,
   POLYNETWORK_ROLE,
-  getLastTokenID
+  getLastTokenID,
+  mineTx,
+  getCurrentBlockTime
 }

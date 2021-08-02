@@ -10,6 +10,7 @@ const {
   INFURA_PROJECT_ID_CYX,
   POLYGON_TESTNET_PRIVATE_KEY,
   POLYGON_MAINNET_PRIVATE_KEY,
+  RINKEBY_PRIVATE_KEYS,
   POLYGONSCAN_API_KEY
 } = require('./.secrets.json');
 
@@ -45,7 +46,7 @@ module.exports = {
     rinkeby: {
       url: 'https://eth-rinkeby.alchemyapi.io/v2/' + ALCHEMY_PROJECT_ID,
       //url: "https://rinkeby.infura.io/v3/" + INFURA_PROJECT_ID_CYX,
-      accounts: BSC_TESTNET_PRIVATE_KEY
+      accounts: RINKEBY_PRIVATE_KEYS
     },
     polygontestnet: {
       url: "https://rpc-mumbai.maticvigil.com/",

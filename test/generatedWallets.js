@@ -4,14 +4,14 @@ const ethers = require('ethers')
 const { JsonRpcProvider } = require('@ethersproject/providers');
 const provider = new JsonRpcProvider("http://localhost:8545");
 
-const { BSC_TESTNET_PRIVATE_KEY } = require('../.secrets.json');
+const { LOCAL_PRIVATE_KEYS } = require('../.secrets.json');
 /**
  * 
  * @param {ethers.providers.BaseProvider} provider 
  * @returns 
  */
 function generatedWallets(provider) {
-  return BSC_TESTNET_PRIVATE_KEY.map((key) => {
+  return LOCAL_PRIVATE_KEYS.map((key) => {
     return new ethers.Wallet(key, provider);
   });
 }
