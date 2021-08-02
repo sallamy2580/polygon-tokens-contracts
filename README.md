@@ -1,4 +1,21 @@
 # GhostMarket NFT ERC721 & ERC1155 Contracts
+## Deployed Contracts:
+
+#### GhostMarketERC721
+https://polygonscan.com/address/
+
+#### GhostMarketERC1155
+https://polygonscan.com/address/
+
+#### ProxyAdmin
+https://polygonscan.com/address/
+
+#### TransparentUpgradeableProxy
+https://polygonscan.com/address/
+
+#### TransparentUpgradeableProxy
+https://polygonscan.com/address/
+
 ## Audit
 
 Coming soon...
@@ -27,7 +44,7 @@ hardhat run scripts/deployERC1155.js
 
 #### to network
 ```
-hardhat --network <network_name> scripts/<deploy_script>.js
+hardhat run --network <network_name> scripts/<deploy_script>.js
 ```
 For local deployment ganache must be started and private keys saved into
 
