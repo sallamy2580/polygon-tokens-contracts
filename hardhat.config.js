@@ -6,11 +6,8 @@ require('hardhat-abi-exporter');
 require("@nomiclabs/hardhat-etherscan");
 
 const {
-  ALCHEMY_PROJECT_ID,
-  INFURA_PROJECT_ID_CYX,
   POLYGON_TESTNET_PRIVATE_KEY,
   POLYGON_MAINNET_PRIVATE_KEY,
-  RINKEBY_PRIVATE_KEYS,
   POLYGONSCAN_API_KEY
 } = require('./.secrets.json');
 
@@ -43,19 +40,12 @@ module.exports = {
   networks: {
     hardhat: {
     },
-    rinkeby: {
-      url: 'https://eth-rinkeby.alchemyapi.io/v2/' + ALCHEMY_PROJECT_ID,
-      //url: "https://rinkeby.infura.io/v3/" + INFURA_PROJECT_ID_CYX,
-      accounts: RINKEBY_PRIVATE_KEYS
-    },
     polygontestnet: {
       url: "https://rpc-mumbai.maticvigil.com/",
       accounts: POLYGON_TESTNET_PRIVATE_KEY
     },
-    mainnet: {
+    polygonmainnet: {
       url: "https://rpc-mainnet.matic.network",
-      //url: "https://polygon-mumbai.infura.io/v3/" + INFURA_PROJECT_ID,
-      // url: " https://polygon-mumbai.g.alchemy.com/v2/" + ALCHEMY_PROJECT_ID,
       accounts: POLYGON_MAINNET_PRIVATE_KEY
     },
   },
