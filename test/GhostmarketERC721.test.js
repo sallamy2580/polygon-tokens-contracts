@@ -113,7 +113,7 @@ describe('GhostMarketERC721', async function () {
     expect(await this.GhostMarketERC721.tokenURI(tokenId)).to.equal(BASE_URI + tokenId);
   });
 
-  it.only("should have tokenId = 1", async function () {
+  it("should have tokenId = 1", async function () {
     await this.GhostMarketERC721.mintGhost(minter, [], "ext_uri", "", "")
     const tokenId = await this.GhostMarketERC721.getLastTokenID()
     expectEqualStringValues(tokenId, 1)
