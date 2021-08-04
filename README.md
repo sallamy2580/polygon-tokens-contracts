@@ -2,19 +2,16 @@
 ## Deployed Contracts:
 
 #### GhostMarketERC721
-https://polygonscan.com/address/
+https://polygonscan.com/address/0x068bef92987d16ef682ff017b822ca1211401eaf
 
 #### GhostMarketERC1155
-https://polygonscan.com/address/
+https://polygonscan.com/address/0xf1c82f5ddb4f1a6a8f3eed2eb25fc39fc6d33fb3
 
 #### ProxyAdmin
-https://polygonscan.com/address/
+https://polygonscan.com/address/0xf41db445d7eaf45536985ce185ce131fa4b42e68
 
 #### TransparentUpgradeableProxy
-https://polygonscan.com/address/
-
-#### TransparentUpgradeableProxy
-https://polygonscan.com/address/
+https://polygonscan.com/address/0xdcdab251151c345ad527851eca783521ea3209e0
 
 ## Audit
 

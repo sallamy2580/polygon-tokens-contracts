@@ -45,7 +45,7 @@ module.exports = {
       accounts: POLYGON_TESTNET_PRIVATE_KEY
     },
     polygonmainnet: {
-      url: "https://rpc-mainnet.matic.network",
+      url: "https://rpc-mainnet.maticvigil.com/",
       accounts: POLYGON_MAINNET_PRIVATE_KEY
     },
   },
