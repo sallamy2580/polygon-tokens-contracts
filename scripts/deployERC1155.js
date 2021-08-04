@@ -9,13 +9,13 @@ async function main() {
   const GhostMarketERC1155 = await ethers.getContractFactory("GhostMarketERC1155");
   const deployer = accounts[0].address
   console.log("Deploying GhostMarketERC1155...");
-  const GhostMarketERC721Proxy = await upgrades.deployProxy(
+  const GhostMarketER1155Proxy = await upgrades.deployProxy(
     GhostMarketERC1155,
     ["GhostMarket ERC1155", "GHOST", "https://api.ghostmarket.io/metadata/polygon/"],
     { deployer, initializer: "initialize", unsafeAllowCustomTypes: true });
   //unsafeAllowCustomTypes Ignores struct mapping in AccessControl, which is fine because it's used in a mapping
   //See: https://solidity.readthedocs.io/en/v0.8.3/
-  console.log("proxy deployed to:", GhostMarketERC721Proxy.address);
+  console.log("proxy deployed to:", GhostMarketER1155Proxy.address);
 }
 
 main()
