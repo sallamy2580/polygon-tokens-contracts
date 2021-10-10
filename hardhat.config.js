@@ -42,11 +42,13 @@ module.exports = {
     },
     polygontestnet: {
       url: "https://rpc-mumbai.maticvigil.com/",
-      accounts: POLYGON_TESTNET_PRIVATE_KEY
+      accounts: POLYGON_TESTNET_PRIVATE_KEY,
+      gasPrice: 8000000000
     },
     polygonmainnet: {
       url: "https://rpc-mainnet.maticvigil.com/",
-      accounts: POLYGON_MAINNET_PRIVATE_KEY
+      accounts: POLYGON_MAINNET_PRIVATE_KEY,
+      gasPrice: 8000000000
     },
   },
   etherscan: {
