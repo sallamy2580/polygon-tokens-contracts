@@ -49,6 +49,16 @@ For local deployment ganache must be started and private keys saved into
 .secrets.json
 ```
 
+secrets.json structure:
+
+```
+{
+    "POLYGON_TESTNET_PRIVATE_KEY": ["key1","key1"],
+    "POLYGON_MAINNET_PRIVATE_KEY": ["key1","key1"],
+    "LOCAL_PRIVATE_KEYS": ["key1","key1"],
+}
+```
+
 ## Testing
 
 tests can be run with:
