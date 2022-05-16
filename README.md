@@ -1,4 +1,4 @@
-# GhostMarket NFT ERC721 & ERC1155 Contracts
+# GhostMarket Polygon NFT ERC721 & ERC1155 Contracts
 ## Deployed Contracts:
 
 #### GhostMarketERC721
@@ -16,15 +16,18 @@ https://polygonscan.com/address/0xdcdab251151c345ad527851eca783521ea3209e0
 ## Audit
 
 Coming soon...
+
 ## Technical Information
 
 Upgradable ERC721 & ERC1155 Contract.
 
 Using OpenZeppelin contracts.
+
 ### Compiling contracts
 ```
 hardhat compile
 ```
+
 ### Deploying Proxy
 
 Using hardhat to deploy proxy contracts
